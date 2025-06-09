@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="relative z-20 flex flex-col justify-end pt-[31rem] sm:pt-[32.99rem]">
         <div className="px-8 md:px-20 ">
           <h1 className="text-4xl md:text-6xl font-bold italic mb-4 text-white">
-            Building Colorado's Future
+          Building the Future
           </h1>
         </div>
 

@@ -33,8 +33,8 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   return (
-    <section className="bg-white py-20 px-20">
-      <div className=" mx-auto text-center relative">
+    <section className="bg-white py-20 px-6 md:px-20">
+      <div className="mx-auto text-center relative">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation
@@ -44,22 +44,24 @@ export default function TestimonialCarousel() {
         >
           {testimonials.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="px-32 flex gap-10">
+              <div className="px-4 md:px-32 flex flex-col md:flex-row gap-3 md:gap-10  text-center md:text-left">
                 <FaQuoteLeft className="text-yellow-500 text-5xl pb-5 inline-block" />
-                <div className="">
-                  <p className="text-lg md:text-[16px] font-medium text-gray-900 leading-relaxed mb-6">
+                <div>
+                  <p className="text-base md:text-[16px] font-medium text-gray-900 leading-relaxed mb-6">
                     “{item.quote}”
                   </p>
-                  <hr className="border-t-2 border-yellow-500 w-full  mx-auto mb-6" />
-                  <div className="flex items-center gap-4">
+                  <hr className="border-t-2 border-yellow-500 w-full mx-auto mb-6" />
+                  <div className="flex items-center gap-5">
                     <Image
                       src={item.logo}
                       alt={item.company}
-                      width={100}
+                      width={80}
                       height={40}
-                      objectFit="contain"
+                      className="object-contain w-20 h-auto"
                     />
-                    <p className="text-md font-semibold text-black">{item.author}</p>
+                    <p className="text-md font-semibold text-black">
+                      {item.author}
+                    </p>
                   </div>
                 </div>
               </div>

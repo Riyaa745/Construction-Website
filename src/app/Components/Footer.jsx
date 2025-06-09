@@ -4,17 +4,17 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 export default function Footer() {
     return (
         <footer className="bg-[#2d2f31] text-white relative">
-            <div className=" mx-auto px-20 py-10 border-t border-yellow-600">
-                <div className="border-[#f5a800] border-b-1 ">
-                    <div className="mb-10 md:mb-9 ">
-                        <div className="flex gap-24 items-center mb-4">
-                            <img src="./logo.svg" alt="codewareit" />
+            <div className="mx-auto px-6 md:px-20 py-10 border-t border-yellow-600">
+                <div className="border-[#f5a800] border-b-1">
+                    <div className="mb-10 md:mb-9">
+                        <div className="flex flex-col md:flex-row md:gap-24 items-start md:items-center mb-4 space-y-3 md:space-y-0">
+                            <img src="./logo1.png" alt="codewareit" className="w-40" />
                             <p className="text-white font-semibold italic text-lg mt-2">
-                                Building Colorado's Future
+                                Building the Future
                             </p>
                         </div>
 
-                        <div className="absolute top-10 right-20">
+                        <div className="md:absolute md:top-10 md:right-20 mt-4 md:mt-0">
                             <button className="border-2 border-[#f5a800] text-white hover:text-black font-bold px-6 py-2 rounded hover:bg-[#f5a800]">
                                 Let's Work Together
                             </button>
@@ -22,8 +22,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-
-                <div className="mt-10 flex flex-col md:flex-row justify-between">
+                <div className="mt-10 flex flex-col md:flex-row md:justify-between space-y-8 md:space-y-0">
                     <div className="text-sm">
                         <p>9100 E. Panorama Drive, Suite 300</p>
                         <p>Englewood, CO 80112</p>
@@ -43,8 +42,9 @@ export default function Footer() {
                             </a>
                         </div>
                     </div>
+
                     <div className="flex flex-col items-start gap-8">
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+                        <div className="grid grid-cols-2 gap-x-10 gap-y-6 md:grid-cols-5 md:gap-8 text-md">
                             <div>
                                 <h3 className="font-bold mb-2">About Us</h3>
                                 <ul className="space-y-1">
@@ -81,16 +81,15 @@ export default function Footer() {
 
                         <div className="text-md text-white mt-6 md:mt-0 flex gap-1 items-end">
                             <p className="italic">
-                                &copy; 2024 JHL Constructors. All Rights Reserved.
+                                &copy; 2024 JHL Constructors. All Rights Reserved.  <span className="underline mt-1">
+                                    Privacy Policy
+                                </span>
                             </p>
-                            <Link href="#" className="underline  mt-1">
-                                Privacy Policy
-                            </Link>
+
                         </div>
                     </div>
                 </div>
             </div>
-
         </footer>
     );
 }

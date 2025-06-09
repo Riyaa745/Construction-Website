@@ -26,17 +26,16 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <nav className="bg-[#37393A] text-white sticky top-0 z-50 px-5 transition-all duration-300 py-4">
+    <nav className="relative bg-[#37393A] text-white sticky top-0 z-50 pl-5 pr-[1rem] sm:pr-[5rem] transition-all duration-300 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <div className={` ${isScrolled ? 'w-20' : 'w-60'}`}>
-          <img src="./logo.svg" alt="codewareit" />
+        <div className={`${isScrolled ? 'w-20' : 'w-30'}`}>
+          <img src="./logo1.png" alt="codewareit" />
         </div>
 
         {/* Hamburger Icon */}
@@ -55,7 +54,6 @@ export default function Navbar() {
               onMouseEnter={() => setActiveDropdown(label)}
             >
               <div>
-                {/* Nav Item */}
                 <div className="flex items-center cursor-pointer select-none">
                   <span className={`transition ${activeDropdown === label ? 'underline underline-offset-4' : ''}`}>
                     {label}
@@ -66,15 +64,11 @@ export default function Navbar() {
                   />
                 </div>
 
-                {/* Dropdown */}
                 {activeDropdown === label && (
                   <div
                     className="absolute top-full left-0 mt-7 min-w-[150px] max-w-full bg-gray-100 text-black border border-gray-200 shadow-md z-20 overflow-auto"
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    {/* Updated underline hover bar */}
-                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-
                     {dropdown.map((item, i) => (
                       <div
                         key={i}
@@ -88,14 +82,13 @@ export default function Navbar() {
               </div>
             </div>
           ))}
-
           <div className="cursor-pointer hover:underline hover:underline-offset-4 transition select-none">Careers</div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden px-4 pb-6 bg-[#F3F3F3] text-black">
+        <div className="md:hidden w-full bg-[#F3F3F3] text-black pb-6 px-4 absolute top-full left-0 z-40">
           {menuItems.map(({ label, dropdown }) => (
             <div key={label} className="border-b border-gray-300">
               <div
