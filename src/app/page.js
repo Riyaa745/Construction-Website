@@ -1,9 +1,16 @@
-import Navbar from "./Components/Navbar";
+import AboutSection from "./Components/About";
+import HeroSection from "./Components/Herosection";
+import ProjectCards from "./Components/Project";
+import TestimonialCarousel from "./Components/Testimonial";
+
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
+    <HeroSection/>
+    <AboutSection/>
+    <ProjectCards/>
+    <TestimonialCarousel/>
     </>
   );
 }
