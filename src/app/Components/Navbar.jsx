@@ -1,42 +1,20 @@
 'use client';
-import { ChevronDown, Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
-
-const menuItems = [
-  {
-    label: 'About Us',
-    dropdown: ['Our Team', 'Culture', 'News', 'History'],
-  },
-  {
-    label: 'Services',
-    dropdown: ['Preconstruction', 'Design-Build', 'General Contracting'],
-  },
-  {
-    label: 'Projects',
-    dropdown: ['Commercial', 'Education', 'Healthcare'],
-  },
-];
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
-  const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
-    <nav className="relative bg-[#37393A] text-white sticky top-0 z-50 pl-5 pr-[1rem] sm:pr-[5rem] transition-all duration-300 py-4">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+    <nav className="bg-black/60 backdrop-blur-md text-white sticky top-0 z-50 px-0 py-2 transition-all duration-300">
+      <div className="container mx-auto px-5 flex justify-between items-center">
         {/* Logo */}
-        <div className={`${isScrolled ? 'w-20' : 'w-30'}`}>
-          <img src="./logo1.png" alt="codewareit" />
-        </div>
+        <Link href="/">
+          <div className="w-30">
+            <img src="./logo1.png" alt="codewareit" />
+          </div>
+        </Link>
 
         {/* Hamburger Icon */}
         <div className="md:hidden flex items-center">
@@ -45,81 +23,36 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Menu for Desktop */}
-        <div className="hidden md:flex space-x-6 items-center font-semibold relative">
-          {menuItems.map(({ label, dropdown }) => (
-            <div
-              key={label}
-              className="relative"
-              onMouseEnter={() => setActiveDropdown(label)}
-            >
-              <div>
-                <div className="flex items-center cursor-pointer select-none">
-                  <span className={`transition ${activeDropdown === label ? 'underline underline-offset-4' : ''}`}>
-                    {label}
-                  </span>
-                  <ChevronDown
-                    size={16}
-                    className={`pl-1 text-yellow-400 transition-transform duration-200 ${activeDropdown === label ? 'rotate-180' : ''}`}
-                  />
-                </div>
-
-                {activeDropdown === label && (
-                  <div
-                    className="absolute top-full left-0 mt-7 min-w-[150px] max-w-full bg-gray-100 text-black border border-gray-200 shadow-md z-20 overflow-auto"
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    {dropdown.map((item, i) => (
-                      <div
-                        key={i}
-                        className="px-4 py-3 border-b border-gray-200 hover:bg-gray-200 cursor-pointer"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8 items-center font-semibold">
+          {[
+            { label: 'Home', href: '/' },
+            { label: 'About', href: '#about' },
+            { label: 'Services', href: '#services' },
+            { label: 'Contact', href: '#contact' }
+          ].map(({ label, href }) => (
+            <Link key={label} href={href} className="relative group transition">
+              <span>{label}</span>
+              <div className="absolute left-0 -bottom-1 h-[2px] w-0 bg-yellow-400 transition-all duration-300 group-hover:w-full"></div>
+            </Link>
           ))}
-          <div className="cursor-pointer hover:underline hover:underline-offset-4 transition select-none">Careers</div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden w-full bg-[#F3F3F3] text-black pb-6 px-4 absolute top-full left-0 z-40">
-          {menuItems.map(({ label, dropdown }) => (
-            <div key={label} className="border-b border-gray-300">
-              <div
-                onClick={() => setActiveDropdown(activeDropdown === label ? null : label)}
-                className="flex justify-between items-center py-4 font-semibold cursor-pointer"
-              >
-                <span>{label}</span>
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform duration-200 ${activeDropdown === label ? 'rotate-180' : ''}`}
-                />
+        <div className="md:hidden w-full bg-white/90 text-black pb-6 px-4 absolute top-full left-0 z-40 backdrop-blur-md">
+          {[
+            { label: 'About', href: '#about' },
+            { label: 'Services', href: '#services' },
+            { label: 'Contact', href: '#contact' }
+          ].map(({ label, href }) => (
+            <Link key={label} href={href}>
+              <div className="border-b border-gray-300 py-4 font-semibold cursor-pointer">
+                {label}
               </div>
-              {activeDropdown === label && (
-                <div className="pl-4 pb-2 space-y-2">
-                  {dropdown.map((item, i) => (
-                    <div key={i} className="py-2 text-gray-600 border-b border-gray-200 cursor-pointer">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            </Link>
           ))}
-
-          <div className="border-b border-gray-300 py-4 font-semibold cursor-pointer">Careers</div>
-
-          {/* Buttons */}
-          <div className="flex gap-4 mt-4">
-            <button className="border-2 border-yellow-400 px-6 py-2 font-semibold">Careers</button>
-            <button className="border-2 border-yellow-400 px-6 py-2 font-semibold">Contact Us</button>
-          </div>
         </div>
       )}
     </nav>
