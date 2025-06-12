@@ -21,14 +21,17 @@ export default function ContactSection() {
 
         {/* Contact Info + Form */}
         <div className="flex flex-col lg:flex-row justify-between mt-10 sm:mt-16 gap-10">
-          
+
           {/* Contact Info */}
           <div className="space-y-6 w-full lg:w-[25rem]">
             <div className="flex items-center space-x-4 p-4 bg-white shadow-lg rounded-xl border-l-4 border-blue-600 hover:scale-105 transition">
               <div className="text-2xl sm:text-3xl">📞</div>
               <div>
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800">Phone</h4>
-                <p className="text-gray-600 text-sm sm:text-md">+91 9837218345</p>
+                <a href="tel:+919837218345" className="text-gray-600 text-sm sm:text-md hover:underline">
+                  +91 9837218345
+                </a>
+
               </div>
             </div>
 
@@ -70,8 +73,8 @@ export default function ContactSection() {
                 <label className="block mb-1 font-medium text-gray-700 text-sm sm:text-base">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Your name"
+                  className="w-full px-4 py-3 rounded-lg border text-slate-600 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter your name"
                 />
               </div>
 
@@ -79,7 +82,7 @@ export default function ContactSection() {
                 <label className="block mb-1 font-medium text-gray-700 text-sm sm:text-base">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg text-slate-600 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="you@example.com"
                 />
               </div>
@@ -88,7 +91,7 @@ export default function ContactSection() {
                 <label className="block mb-1 font-medium text-gray-700 text-sm sm:text-base">Message</label>
                 <textarea
                   rows="4"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg text-slate-600 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Write your message here..."
                 ></textarea>
               </div>

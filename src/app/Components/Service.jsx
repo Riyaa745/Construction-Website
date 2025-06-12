@@ -20,7 +20,8 @@ const services = [
   {
     title: 'Infrastructure',
     image: '/s4.jpg',
-    description: 'Robust infrastructure solutions that drive growth and connectivity.',
+    description: `We deliver robust infrastructure solutions that enhance growth potential,boost connectivity, and ensure durability.`,
+
   },
 ];
 

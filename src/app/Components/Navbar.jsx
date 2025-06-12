@@ -27,9 +27,9 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 items-center font-semibold">
           {[
             { label: 'Home', href: '/' },
-            { label: 'About', href: '#about' },
-            { label: 'Services', href: '#services' },
-            { label: 'Contact', href: '#contact' }
+            { label: 'About', href: '/Aboutus' },
+            { label: 'Services', href: '/Service' },
+            { label: 'Contact', href: '/Contactpage' }
           ].map(({ label, href }) => (
             <Link key={label} href={href} className="relative group transition">
               <span>{label}</span>

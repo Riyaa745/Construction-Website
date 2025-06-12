@@ -64,22 +64,22 @@ export default function Footer() {
                         <div className="grid grid-cols-2 gap-x-10 gap-y-6 md:grid-cols-5 md:gap-8 text-md">
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/about" className="hover:text-yellow-500 transition-colors duration-200">About</Link>
+                                    <Link href="/" className="hover:text-yellow-500 transition-colors duration-200">Home</Link>
                                 </h3>
                             </div>
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/services" className="hover:text-yellow-500 transition-colors duration-200">Services</Link>
+                                    <Link href="/Aboutus" className="hover:text-yellow-500 transition-colors duration-200">About</Link>
                                 </h3>
                             </div>
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/projects" className="hover:text-yellow-500 transition-colors duration-200">Projects</Link>
+                                    <Link href="/Service" className="hover:text-yellow-500 transition-colors duration-200">Services</Link>
                                 </h3>
                             </div>
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/contact" className="hover:text-yellow-500 transition-colors duration-200">Contact</Link>
+                                    <Link href="/Contactpage" className="hover:text-yellow-500 transition-colors duration-200">Contact</Link>
                                 </h3>
                             </div>
                         </div>
