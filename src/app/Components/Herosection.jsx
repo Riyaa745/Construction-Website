@@ -21,7 +21,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-20 flex flex-col justify-end pt-[31rem] sm:pt-[32.99rem]">
         {/* Headline and Subheadline */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-[12rem] -translate-y-[26rem] sm:-translate-x-[25rem] sm:-translate-y-[15rem] text-center z-20 px-4 md:px-20">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-[12rem] -translate-y-[26rem] sm:-translate-x-[20rem] sm:-translate-y-[15rem] text-center z-20 px-4 md:px-20">
           <h1 className="text-6xl font-bold italic text-white mb-4">
             Engineering Excellence, Building Dreams
           </h1>

@@ -36,7 +36,7 @@ const services = [
 ];
 export default function Servicecard() {
     return (
-        <section className="py-20 px-8 bg-white text-center">
+        <section className="py-10 sm:py-20 px-4 sm:px-12 bg-white text-center">
 
             <nav className="text-sm sm:text-base lg:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600 mb-4 sm:mb-6">
                 Home <span className="text-yellow-400"> &gt; </span>

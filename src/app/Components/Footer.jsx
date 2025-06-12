@@ -5,15 +5,15 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaEnvelope } fr
 export default function Footer() {
     return (
         <footer className="bg-[#2d2f31] text-white relative">
-            <div className="mx-auto px-6 md:px-20 py-10 border-t border-yellow-600">
+            <div className="mx-auto px-6 md:px-20 py-8 border-t border-yellow-600">
                 <div className="border-[#f5a800] border-b-1">
-                    <div className="mb-10 md:mb-9">
-                        <div className="flex flex-col md:flex-row md:gap-2 items-start md:items-center mb-4 space-y-3 md:space-y-0">
+                    <div className="mb-10 md:mb-5">
+                        <div className="flex flex-col md:flex-row md:gap-4 items-start md:items-center mb-4 space-y-3 md:space-y-0">
                             <Image
                                 src="/logo1.png" // use absolute path (from /public)
                                 alt="codewareit"
-                                width={160}       // w-40 = 10rem = 160px
-                                height={80}       // approximate height for logo, adjust as needed
+                                width={120}       // w-40 = 10rem = 160px
+                                height={40}       // approximate height for logo, adjust as needed
                                 className="w-40 h-auto"
                             />
                             <p className="text-white font-semibold italic text-lg mt-2">

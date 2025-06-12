@@ -30,7 +30,7 @@ export default function About() {
     ];
 
     return (
-        <div className="px-4 sm:px-8 md:px-12 py-10 md:py-12 mx-auto sm:mt-[0] bg-white">
+        <div className="px-4  sm:px-12 py-10 md:py-20 mx-auto sm:mt-[0] bg-white">
             {/* Breadcrumb */}
             <nav className="text-base sm:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600 mb-5 sm:mb-7">
                 <span>Home</span> <span className="text-yellow-500">&gt;</span> <span>About Us</span>
