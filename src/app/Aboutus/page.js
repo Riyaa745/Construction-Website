@@ -1,5 +1,7 @@
-import React from 'react'
+'use client';
+import React from 'react';
 import { ArrowRight, Phone, CheckCircle, Target, Eye, Gem } from "lucide-react";
+import Image from 'next/image';
 
 export default function About() {
     const items = [
@@ -28,7 +30,7 @@ export default function About() {
     ];
 
     return (
-        <div className="px-4 sm:px-8 md:px-12 py-10 md:py-12 mx-auto mt-8 sm:mt-10 lg:mt-[2rem]">
+        <div className="px-4 sm:px-8 md:px-12 py-10 md:py-12 mx-auto sm:mt-[0] bg-white">
             {/* Breadcrumb */}
             <nav className="text-base sm:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600 mb-5 sm:mb-7">
                 <span>Home</span> <span className="text-yellow-500">&gt;</span> <span>About Us</span>
@@ -37,16 +39,18 @@ export default function About() {
             {/* Hero Section */}
             <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-4 sm:px-6 md:px-10 bg-white">
                 <div className="w-full lg:w-1/2 rounded-lg overflow-hidden">
-                    <img
-                        src="/about1.avif"
+                    <Image
+                        src="/about1.jpg"
                         alt="Construction Experts"
+                        width={600}
+                        height={400}
                         className="w-full h-auto object-cover rounded-lg"
                     />
                 </div>
 
                 <div className="w-full lg:w-1/2 lg:pl-10 mt-8 lg:mt-0">
                     <h4 className="text-yellow-500 text-2xl sm:text-[30px] font-semibold uppercase mb-1">About Us</h4>
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 mt-2 leading-snug">
+                    <h2 className="text-3xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 mt-2 leading-snug">
                         Building Dreams, Structuring Future
                     </h2>
                     <p className="text-gray-600 text-md mb-5 leading-relaxed">
@@ -90,11 +94,13 @@ export default function About() {
             </section>
 
             {/* Our Legacy */}
-            <section className="bg-blue-50 py-16 px-4 sm:px-10 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
+            <section className="bg-white py-16 px-4 sm:px-10 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="relative w-full md:w-1/2">
-                    <img
+                    <Image
                         src="/silhouette.avif"
                         alt="Construction Site"
+                        width={600}
+                        height={400}
                         className="rounded-3xl shadow-lg w-full object-cover"
                     />
                 </div>
@@ -149,7 +155,7 @@ export default function About() {
             </section>
 
             {/* Stats */}
-            <section className="mt-[-3.7rem] py-16 px-2 sm:px-6 md:px-12">
+            <section className="py-16 px-2 sm:px-6 md:px-12 bg-white">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {stats.map((item, index) => (
                         <div
