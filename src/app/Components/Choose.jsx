@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-
 function CountUp({ end = 100, duration = 2000, startCount }) {
   const [count, setCount] = useState(0);
 
@@ -37,20 +36,22 @@ function Choose() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !startCount) {
           setStartCount(true);
-          observer.disconnect(); // run only once
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.1 } // ✅ Lower threshold to work better on mobile
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, [startCount]);
 
   return (
     <section ref={sectionRef} className="py-16 bg-white">

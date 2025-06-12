@@ -2,12 +2,12 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <div className="px-4 sm:px-8 md:px-12 py-10 sm:py-20 bg-gradient-to-br from-blue-50 to-white flex flex-col items-center">
+    <div className="px-4 sm:px-8 md:px-12 py-24 sm:py-20 bg-gradient-to-br from-blue-50 to-white flex flex-col items-center">
       <div className="w-full max-w-7xl">
 
         {/* Breadcrumb + Heading */}
         <div>
-          <nav className="text-sm sm:text-base lg:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600 mb-4 sm:mb-6">
+          <nav className="text-sm sm:text-base lg:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600 mb-8 sm:mb-6">
             Home <span className="text-yellow-400"> &gt; </span>
             <span className="font-bold">Contact us</span>
           </nav>
@@ -28,8 +28,8 @@ export default function ContactSection() {
               <div className="text-2xl sm:text-3xl">📞</div>
               <div>
                 <h4 className="text-base sm:text-lg font-semibold text-gray-800">Phone</h4>
-                <a href="tel:+919837218345" className="text-gray-600 text-sm sm:text-md hover:underline">
-                  +91 9837218345
+                <a href="tel:+91 9634508816" className="text-gray-600 text-sm sm:text-md hover:underline">
+                  +91 9634508816
                 </a>
               </div>
             </div>

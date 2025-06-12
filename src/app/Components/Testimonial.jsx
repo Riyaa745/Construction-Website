@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { FaQuoteLeft } from "react-icons/fa";
@@ -32,9 +33,35 @@ const testimonials = [
 ];
 
 export default function TestimonialCarousel() {
+  useEffect(() => {
+    const nextBtn = document.querySelector(".swiper-button-next");
+    const prevBtn = document.querySelector(".swiper-button-prev");
+
+    if (nextBtn && prevBtn) {
+      [nextBtn, prevBtn].forEach((btn) => {
+        btn.classList.add(
+          "text-yellow-500",
+          "transition-all",
+          "duration-300",
+          "z-30",
+          "w-6",
+          "h-6",
+          "text-lg",
+          "md:text-3xl",
+          "absolute",
+          "top-1/2",
+          "-translate-y-1/2"
+        );
+      });
+
+      nextBtn.classList.add("right-2", "md:right-5");
+      prevBtn.classList.add("left-2", "md:left-5");
+    }
+  }, []);
+
   return (
-    <section className="bg-white py-20 px-6 md:px-20">
-      <div className="mx-auto text-center relative">
+    <section className="bg-white py-20 px-4 md:px-20 relative">
+      <div className="mx-auto text-center">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation
@@ -44,14 +71,14 @@ export default function TestimonialCarousel() {
         >
           {testimonials.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="px-4 md:px-32 flex flex-col md:flex-row gap-3 md:gap-10  text-center md:text-left">
-                <FaQuoteLeft className="text-yellow-500 text-5xl pb-5 inline-block" />
+              <div className="px-2 md:px-32 flex flex-col md:flex-row gap-3 md:gap-10 text-center md:text-left relative">
+                <FaQuoteLeft className="text-yellow-500 text-4xl pb-3 md:text-5xl" />
                 <div>
-                  <p className="text-base md:text-[16px] font-medium text-gray-900 leading-relaxed mb-6">
+                  <p className="text-sm md:text-[16px] font-medium text-gray-900 leading-relaxed mb-6">
                     “{item.quote}”
                   </p>
                   <hr className="border-t-2 border-yellow-500 w-full mx-auto mb-6" />
-                  <div className="flex items-center gap-5">
+                  <div className="flex items-center gap-4 justify-center md:justify-start">
                     <Image
                       src={item.logo}
                       alt={item.company}

@@ -21,7 +21,7 @@ export default function Navbar() {
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     } else {
-      setIsScrolled(true); // Always apply background on other pages
+      setIsScrolled(true);
     }
   }, [isHomePage]);
 
@@ -37,14 +37,8 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <div className="w-30">
-            {/* <Image
-              src="/logo1.png"
-              alt="codewareit"
-              width={120}
-              height={40}
-            /> */}
-
-            <h1 className='font-bold'>BHUMIJ INFRA</h1>
+            {/* <Image src="/logo1.png" alt="codewareit" width={120} height={40} /> */}
+            <h1 className="font-bold">BHUMIJ INFRA</h1>
           </div>
         </Link>
 
@@ -73,14 +67,15 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden w-full bg-white/90 text-black pb-6 px-4 absolute top-full left-0 z-40">
+        <div className="md:hidden w-full min-h-screen bg-black text-white pb-6 px-4 absolute top-full left-0 z-40 backdrop-blur-sm rounded-b-xl">
           {[
+            { label: 'Home', href: '/' },
             { label: 'About', href: '/aboutus' },
-            { label: 'Service', href: '/services' },
+            { label: 'Service', href: '/service' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
-            <Link key={label} href={href}>
-              <div className="border-b border-gray-300 py-4 font-semibold cursor-pointer">
+            <Link key={label} href={href} onClick={() => setMobileOpen(false)}>
+              <div className="border-b border-gray-600 py-4 font-semibold cursor-pointer hover:text-yellow-400 transition">
                 {label}
               </div>
             </Link>

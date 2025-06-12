@@ -47,9 +47,9 @@ export default function AboutSection() {
           </ul>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center gap-3 pt-4 sm:pt-0">
           <Link href='/contact'>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-white px-5 py-2 rounded-full text-sm font-medium">
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-white  px-5 py-3 sm:py-2 rounded-full text-lg sm:text-sm font-medium">
               Get Free Quote
             </button>
           </Link>

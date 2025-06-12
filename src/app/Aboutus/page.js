@@ -30,25 +30,26 @@ export default function About() {
     ];
 
     return (
-        <div className="px-4  sm:px-12 py-10 md:py-20 mx-auto sm:mt-[0] bg-white">
+        <div className="px-4 sm:px-12 py-24 md:py-20 mx-auto sm:mt-[0] bg-white">
             {/* Breadcrumb */}
-            <nav className="text-base sm:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600 mb-5 sm:mb-7">
+            <nav className="text-base sm:text-lg gap-2 sm:gap-3 flex font-bold text-gray-600  sm:mb-6">
                 <span>Home</span> <span className="text-yellow-500">&gt;</span> <span>About Us</span>
             </nav>
 
-            {/* Hero Section */}
-            <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-4 sm:px-6 md:px-10 bg-white">
+            {/* About section */}
+            <section className="flex flex-col-reverse lg:flex-row items-center justify-between py-12 px-4 sm:px-6 md:px-10 bg-white">
+                {/* image1 */}
                 <div className="w-full lg:w-1/2 rounded-lg overflow-hidden">
                     <Image
                         src="/about1.jpg"
                         alt="Construction Experts"
                         width={600}
                         height={400}
-                        className="w-full h-auto object-cover rounded-lg"
+                        className="w-full h-auto object-cover rounded-lg mt-8"
                     />
                 </div>
-
-                <div className="w-full lg:w-1/2 lg:pl-10 mt-8 lg:mt-0">
+                {/* content1 */}
+                <div className="w-full lg:w-1/2 lg:pl-10 lg:mt-0">
                     <h4 className="text-yellow-500 text-2xl sm:text-[30px] font-semibold uppercase mb-1">About Us</h4>
                     <h2 className="text-3xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 mt-2 leading-snug">
                         Building Dreams, Structuring Future
@@ -94,7 +95,8 @@ export default function About() {
             </section>
 
             {/* Our Legacy */}
-            <section className="bg-white py-16 px-4 sm:px-10 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
+            <section className="bg-white py-5 sm:py-16 px-4 sm:px-10 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+                {/* image2 */}
                 <div className="relative w-full md:w-1/2">
                     <Image
                         src="/silhouette.avif"
@@ -104,8 +106,8 @@ export default function About() {
                         className="rounded-3xl shadow-lg w-full object-cover"
                     />
                 </div>
-
-                <div className="w-full md:w-1/2 space-y-6 mt-[1.3rem]">
+                {/* content2 */}
+                <div className="w-full md:w-1/2 space-y-5 ">
                     <h4 className="text-yellow-500 text-2xl sm:text-3xl font-semibold uppercase tracking-wider">
                         Our Legacy
                     </h4>
