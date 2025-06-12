@@ -12,10 +12,10 @@ export default function ContactSection() {
             <span className="font-bold">Contact us</span>
           </nav>
           <h2 className="text-2xl sm:text-3xl lg:text-5xl text-[rgb(19,85,137)] font-bold mb-4">
-            Let's Get the Conversation Started
+            Let&apos;s Get the Conversation Started
           </h2>
           <p className="text-gray-700 mb-8 text-base sm:text-lg">
-            Let’s build something incredible together. Reach out to us.
+            Let&rsquo;s build something incredible together. Reach out to us.
           </p>
         </div>
 
@@ -31,7 +31,6 @@ export default function ContactSection() {
                 <a href="tel:+919837218345" className="text-gray-600 text-sm sm:text-md hover:underline">
                   +91 9837218345
                 </a>
-
               </div>
             </div>
 
