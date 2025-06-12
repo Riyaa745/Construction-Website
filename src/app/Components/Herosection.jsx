@@ -21,7 +21,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-20 flex flex-col justify-end pt-[31rem] sm:pt-[32.99rem]">
         {/* Headline and Subheadline */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-[11rem] -translate-y-[23rem] sm:-translate-x-[25rem] sm:-translate-y-[15rem] text-center z-20 px-4 md:px-20">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-[12rem] -translate-y-[26rem] sm:-translate-x-[25rem] sm:-translate-y-[15rem] text-center z-20 px-4 md:px-20">
           <h1 className="text-6xl font-bold italic text-white mb-4">
             Engineering Excellence, Building Dreams
           </h1>
@@ -31,7 +31,7 @@ export default function HeroSection() {
         </div>
 
         {/* Full-width Black Background Section */}
-        <div className="w-full bg-[#030303] text-white px-8 md:px-20 py-10 mt-[20rem] sm:mt-10">
+        <div className="w-full bg-[#030303] text-white px-8 md:px-20 py-5 sm:py-10 mt-[25rem] sm:mt-30">
           <div className="grid md:grid-cols-2 gap-10 w-full">
             <div>
               <div className="h-0.5 bg-yellow-400 mb-5"></div>

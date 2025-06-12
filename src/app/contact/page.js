@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <div className="px-4 sm:px-8 md:px-12 py-10 sm:py-12 bg-gradient-to-br from-blue-50 to-white flex flex-col items-center">
+    <div className="px-4 sm:px-8 md:px-12 py-10 sm:py-20 bg-gradient-to-br from-blue-50 to-white flex flex-col items-center">
       <div className="w-full max-w-7xl">
 
         {/* Breadcrumb + Heading */}

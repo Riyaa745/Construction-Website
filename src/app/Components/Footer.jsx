@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from "next/link";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
@@ -8,16 +9,24 @@ export default function Footer() {
                 <div className="border-[#f5a800] border-b-1">
                     <div className="mb-10 md:mb-9">
                         <div className="flex flex-col md:flex-row md:gap-2 items-start md:items-center mb-4 space-y-3 md:space-y-0">
-                            <img src="./logo1.png" alt="codewareit" className="w-40" />
+                            <Image
+                                src="/logo1.png" // use absolute path (from /public)
+                                alt="codewareit"
+                                width={160}       // w-40 = 10rem = 160px
+                                height={80}       // approximate height for logo, adjust as needed
+                                className="w-40 h-auto"
+                            />
                             <p className="text-white font-semibold italic text-lg mt-2">
                                 Building the Future
                             </p>
                         </div>
 
                         <div className="md:absolute md:top-10 md:right-20 mt-4 md:mt-0">
-                            <button className="border-2 border-[#f5a800] text-white hover:text-black font-bold px-6 py-2 rounded hover:bg-[#f5a800]">
-                                Let's Work Together
-                            </button>
+                            <Link href="/contact">
+                                <button className="border-2 border-[#f5a800] text-white hover:text-black font-bold px-6 py-2 rounded hover:bg-[#f5a800]">
+                                    Let's Work Together
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -69,24 +78,24 @@ export default function Footer() {
                             </div>
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/Aboutus" className="hover:text-yellow-500 transition-colors duration-200">About</Link>
+                                    <Link href="/aboutus" className="hover:text-yellow-500 transition-colors duration-200">About</Link>
                                 </h3>
                             </div>
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/Service" className="hover:text-yellow-500 transition-colors duration-200">Services</Link>
+                                    <Link href="/service" className="hover:text-yellow-500 transition-colors duration-200">Services</Link>
                                 </h3>
                             </div>
                             <div>
                                 <h3 className="font-bold mb-2">
-                                    <Link href="/Contactpage" className="hover:text-yellow-500 transition-colors duration-200">Contact</Link>
+                                    <Link href="/contact" className="hover:text-yellow-500 transition-colors duration-200">Contact</Link>
                                 </h3>
                             </div>
                         </div>
 
                         <div className="text-md text-white mt-6 md:mt-0 flex gap-1 items-end">
                             <p className="italic">
-                                &copy; 2024 JHL Constructors. All Rights Reserved. <span className="underline mt-1 hover:text-yellow-500 transition-colors duration-200">
+                                &copy; 2025 <a href="https://codewareit.in/" target='_blank'>Codewareit Pvt Ltd</a>. All Rights Reserved. <span className="underline mt-1 hover:text-yellow-500 transition-colors duration-200">
                                     Privacy Policy
                                 </span>
                             </p>

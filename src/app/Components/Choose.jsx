@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+
 
 function CountUp({ end = 100, duration = 2000, startCount }) {
   const [count, setCount] = useState(0);

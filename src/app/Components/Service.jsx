@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from "next/link";
 
 const services = [
   {
@@ -77,10 +78,11 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
-
-        <button className="mt-10 bg-yellow-400 text-black px-6 py-2 font-bold rounded-full hover:bg-yellow-500 transition">
-          View All Services →
-        </button>
+        <Link href='/service'>
+          <button className="mt-10 bg-yellow-400 text-black px-6 py-2 font-bold rounded-full hover:bg-yellow-500 transition">
+            View All Services →
+          </button>
+        </Link>
       </div>
     </section>
   );

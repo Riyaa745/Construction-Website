@@ -1,14 +1,18 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutSection() {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-4 bg-white">
       {/* Left Image */}
       <div className="w-full lg:w-1/2 rounded-lg overflow-hidden">
-        <img
+        <Image
           src="/about1.jpg"
           alt="Construction Experts"
+          width={800} // approximate full width
+          height={600} // match your original image aspect
           className="w-full h-auto object-cover rounded-lg"
         />
       </div>
@@ -44,9 +48,11 @@ export default function AboutSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-3">
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-white px-5 py-2 rounded-full text-sm font-medium">
-            Get Free Quote
-          </button>
+          <Link href='/contact'>
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-white px-5 py-2 rounded-full text-sm font-medium">
+              Get Free Quote
+            </button>
+          </Link>
           <div className="flex items-center space-x-2 text-sm">
             <span className="text-yellow-500 text-lg">📞</span>
             <div>
