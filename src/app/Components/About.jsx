@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-4 bg-white">
+    <section className="flex flex-col lg:flex-row items-center justify-between py-12 px-4 bg-white mt-0">
       {/* Left Image */}
       <div className="w-full lg:w-1/2 rounded-lg overflow-hidden">
         <img
@@ -54,7 +54,6 @@ export default function AboutSection() {
               <a href="tel:+919634508816" className="font-bold text-gray-800 hover:underline">
                 +91 9634508816
               </a>
-
             </div>
           </div>
         </div>
